@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="one.js"></script>
+    <!-- <script>
+      function change_color() {
+        var btn = document.getElementById(id);
+        btn.className =
+          btn.className == "btn btn-primary"
+            ? "btn btn-warning"
+            : "btn btn-primary";
+      }
+    </script> -->
+    <!-- <script>
+        function go(){
+            var btn = document.getElementById("novi");
+            btn.className = (btn.className == "btn btn-warning")?"btn btn-info":"btn btn-warning";
+
+        }
+        var timer;
+        function startblik(){
+            timer = setInterval(go,150);
+        }
+        function stop(){
+            clearInterval(timer);
+        }
+    </script> -->
+    <script>
+      function go() {
+        var ar = [10, 20, 30, 40, 50, 60, 78, 98, 56];
+        var num = parseInt(document.getElementById("num").value);
+        var found = false;
+        for (var i = 0; i < ar.length; i++) {
+          if (num == ar[i]) {
+            found = true;
+            break;
+          }
+        }
+          if (found) {
+            document.getElementById("result").innerHTML =
+              "<strong class='badge badge-success'>" +
+              num +
+              " is a part of array </strong>";
+          } else {
+            document.getElementById("result").innerHTML =
+              "<strong class='badge badge-danger'>" +
+              num +
+              " is a not part of array </strong>";
+          }
+        }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <label for="num">enter number</label>
+      <input
+        type="number"
+        name="num"
+        id="num"
+        placeholder="enter number here"
+      />
+      <input
+        type="button"
+        value="check"
+        class="btn btn-primary"
+        onclick="go()"
+      />
+      <div id="result"></div>
+    </div>
+    <!-- <div class="container">
+      <input type="button" value="click me!" onclick="go()">
+    </div> -->
+    <!-- <div class="container">
+     <h2>prime numbers in between</h2>
+     <label for="from">prime number from &nbsp;</label>
+     <input type="number" name="from" id="from" placeholder="enter value"><br>
+     <label for="from">prime number to &nbsp; &nbsp; &nbsp; </label>
+     <input type="number" name="to" id="to" placeholder="enter value"><br>
+
+     <input type="button" value="check" class="btn btn-primary" onclick="go()">
+     <div id="output"></div>
+   </div> -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-success">ENTER NUMBER TO BE REVERSED</h1>
+          <input type="number" placeholder="enter number" id="num">
+          <input type="button" value="check" class="btn btn-primary" onclick="reverse()">
+        </div>
+      </div>
+      <div id="content">
+
+      </div>
+    </div> -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+          <div class="form-group">
+            <label for="num">no. of columns(products)</label>
+            <input type="number" name="num" id="num" autocomplete="off" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="submit" value="check" onclick="grid()" class="btn btn-primary">
+          </div>
+        </div>
+      </div>
+      <div class="row" id="content">
+        
+      </div>
+    </div> -->
+    <!-- <div class="container">
+      <h2 class="text-center">Create Table</h2>
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+          <div class="form-group">
+            <label for="num">enter number of rows you need</label>
+            <input
+              type="number"
+              name="num"
+              id="num"
+              autocomplete="off"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <input type="button" value="check" onclick="create()" class="btn btn-primary">
+            <div id="output"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12" id="content"> -->
+    <!-- <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>columns</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table> -->
+
+    <!-- </div>
+      </div>
+    </div> -->
+    <!-- <h2>check whether number is prime or not</h2>
+     <input type="number" placeholder="enter number" id="a" >
+     <input type="button" value="check" onclick="go()" class="btn btn-secondary">
+     <strong id="t"></strong> -->
+    <!-- <div class="container" id="c">
+      
+    </div> -->
+    <!-- <div class="container">
+      <input type="number" placeholder="VALUE OF A" id="a" />
+      <input
+        type="button"
+        value="please enter number ranging from 1 to 7"
+        class="btn btn-success"
+        onclick="calc2()"
+      />
+      <strong id="r"></strong>
+    </div> -->
+    <!-- 
+    <div class="container">
+      <input type="number" placeholder="value of a" id="a" >
+      <input type="number" placeholder="value of b" id="b" >
+      <input type="number" placeholder="value of c" id="c" >
+      <input type="button" value="compare" class="btn btn-danger" onclick="calc()">
+      <strong id="r" ></strong>
+    </div> -->
+    <!-- <div class="container">
+          <input type="button" value="offer 20%" class="btn btn-warning" onclick="go()" onmouseover="stop()" onmouseleave="startblik()" id="novi">
+      </div> -->
+
+    <!-- <div class="container">
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="btn1"
+        id="btn1"
+        onclick="change_color('btn1')"
+      />
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="btn2"
+        id="btn2"
+        onclick="change_color('btn2')"
+      />
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="btn3"
+        id="btn3"
+        onclick="change_color('btn3')"
+      />
+    </div> -->
+    <!-- <br />
+    <br />
+    <br />
+    <div class="container">
+      <input
+        type="button"
+        value="btn1"
+        onmouseover="change_color(this)"
+        onmouseleave="change_color(this)"
+        onclick="change_color(this)"
+        class="btn btn-primary"
+      />
+    </div> -->
+
+    <!-- <input type="number" id="a" placeholder="VALUE OF A">
+     <input type="number" id="b" placeholder="VALUE OF B">
+     <input type="text" readonly id="result">
+     <input type="button" value="sum" onclick="go()"> -->
+
+    <!-- <input type="button" class="btn btn-primary" value="click" onclick="go5()"> -->
+    <!-- <div id="output" class="bg-secondary text-white p-3"></div>  -->
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="form-group">
+                    <label for="a">VALUE OF A</label>
+                    <input type="number" name="a" class="form-control" id="a">
+                </div>
+                <div class="form-group">
+                    <label for="b">VALUE OF B</label>
+                    <input type="number" name="b" class="form-control" id="b">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="b">VALUE OF C</label>
+                    <input type="number" name="c" class="form-control" id="c">
+                </div> -->
+    <!-- <div class="form-group">
+                    <input type="button" value="compare" class="btn btn-warning" onclick="go5()">
+                    <label id="result"></label>
+                </div>
+                
+                <input type="reset" value="reset" class="btn btn-info">
+                
+            </div>
+        </div>
+    </div> -->
+  </body>
+</html>
