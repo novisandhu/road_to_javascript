@@ -34,9 +34,10 @@
             clearInterval(timer);
         }
     </script> -->
-    <script>
+    <!-- <script>
+       var ar = [10, 20, 30, 40, 50, 60, 78, 98, 2, 56];
       function go() {
-        var ar = [10, 20, 30, 40, 50, 60, 78, 98, 56];
+       
         var num = parseInt(document.getElementById("num").value);
         var found = false;
         for (var i = 0; i < ar.length; i++) {
@@ -57,11 +58,94 @@
               " is a not part of array </strong>";
           }
         }
+        function go2(){
+        var largestno = ar[0];
+        for (var i = 1; i < ar.length; i++) {
+          if (largestno < ar[i]) {
+            largestno = ar[i];
+            
+          }
+        }
+        document.getElementById("result").innerHTML =
+              "<strong class='badge badge-success'>" +
+              largestno +
+              " is a largest among all of array </strong>";
+
+        }
+        function go3(){
+        var small = ar[0];
+        for (var i = 1; i < ar.length; i++) {
+          if (small > ar[i]) {
+            small = ar[i];
+            
+          }
+        }
+        document.getElementById("result").innerHTML =
+              "<strong class='badge badge-success'>" +
+              small +
+              " is a smallest among all of array </strong>";
+
+        }
       
+    </script> -->
+    <script>
+      var ar = ["icons_03.jpg", "icons_05.jpg", "icons_09.jpg","icons_10.jpg"];
+      var index = 0;
+      function next() {
+        if (index < ar.length - 1) {
+          index++;
+        } else {
+          index = 0;
+        }
+        var img = document.getElementById("img1");
+        img.src = "images/" + ar[index];
+      }
+      function prev(){
+        if(index == 0){
+          index = ar.length - 1;
+        }else{
+          index--;
+        }
+        var img = document.getElementById("img1");
+        img.src = "images/" + ar[index];
+      }
     </script>
   </head>
   <body>
     <div class="container">
+      <img src="images/icons_03.jpg" alt="" id="img1" />
+      <input type="button" value="next" onclick="next()" />
+      <input type="button" value="previos" onclick="prev()" />
+    </div>
+    <!-- <div class="container">
+      <label for="num">enter number</label>
+      <input
+        type="number"
+        name="num"
+        id="num"
+        placeholder="enter number here"
+      />
+      <input
+        type="button"
+        value="check"
+        class="btn btn-primary"
+        onclick="go()"
+      />
+      <input
+      type="button"
+      value="check"
+      class="btn btn-danger"
+      onclick="go2()"
+    />
+    <input
+      type="button"
+      value="check"
+      class="btn btn-success"
+      onclick="go3()"
+    />
+      <div id="result"></div>
+    </div> -->
+    <!-- <div class="container">
       <label for="num">enter number</label>
       <input
         type="number"
@@ -76,7 +160,7 @@
         onclick="go()"
       />
       <div id="result"></div>
-    </div>
+    </div> -->
     <!-- <div class="container">
       <input type="button" value="click me!" onclick="go()">
     </div> -->
