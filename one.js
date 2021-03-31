@@ -268,9 +268,6 @@
 //   }
 // }
 
-
-
-
 // arrays in java script
 
 // var ar = [10 , 20, 30, 40];
@@ -282,3 +279,50 @@
 
 // var ar = [10 ,20 ,30, 40, "hello"];
 // console.log(ar);
+
+// js strings
+
+// var s = "hello@world.com";
+// alert(typeof s)
+// for(var i = 0 ; i< s.length ; i++){
+//     console.log(s[i]);}
+//     console.log(s.toUpperCase());
+// console.log(s.toLocaleLowerCase());
+
+//    var pos = s.toLowerCase().indexOf("l") == -1 ? "not found" : "found";
+//    console.log(pos);
+
+//    var pose = s.indexOf("l");
+//    var pose2 = s.lastIndexOf("l");
+//    console.log(pose +","+ pose2)
+
+// validation for an email adress must follow these contraints
+// atleast one .
+// atleast one @
+// max one @
+// index @ < last .
+
+// function go() {
+//   var s = document.getElementById("rst").value;
+//   // alert(typeof s);
+
+//   if (
+//     s.indexOf("@") != -1 &&
+//     s.indexOf(".") != -1 &&
+//     s.indexOf("@") == s.lastIndexOf("@") &&
+//     s.indexOf("@") < s.indexOf(".")
+//   ) {
+//     document.getElementById("output").innerHTML = "<strong><span class='badge badge-success'> valid email</span> </strong>";
+//   } else {
+//     document.getElementById("output").innerHTML = "<strong><span class='badge badge-danger'> invalid email </span></strong>";
+//   }
+// }
+
+// function go(){
+//   var s = "helloWorld how are you";
+//   console.log(s.charAt(12));
+//   console.log(s.charCodeAt(5));
+
+//   var ar = s.split(" ").length;
+//   console.log(ar)
+// }
