@@ -326,3 +326,18 @@
 //   var ar = s.split(" ").length;
 //   console.log(ar)
 // }
+
+// making sub string from string
+
+function go(){
+//     var s  = "hello world how are you";
+    // var novi = s.substring(6,12);
+    // console.log(novi);
+    // var novi = s.replace("world", "amritsar");
+    // console.log(novi);
+
+    var s = "UNDERmaintainance.jpg";
+    var result = s.toLowerCase().endsWith("jpg");
+    console.log(result);
+    console.log(s.repeat(6));
+}
