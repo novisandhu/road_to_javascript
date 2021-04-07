@@ -341,26 +341,73 @@
 //     console.log(result);
 //     console.log(s.repeat(6));
 // }
+function remove(roll_no){
+    var res = confirm("are you sure to delete?");
+    if (res){
+    alert("data of roll number" +roll_no+ " is removed")
+    }
+}
+function go() {
+  var students = [
+    {
+      roll_no: 1,
+      name: "karan",
+      age: 20,
+      marks: 80.9,
+      coursename: "btech",
+      getdetails: function () {
+        return this.name + " and marks :" + this.marks;
+      },
+    },
+    {
+      roll_no: 2,
+      name: "kamal",
+      age: 20,
+      marks: 80.9,
+      coursename: "btech",
+      getdetails: function () {
+        return this.name + " and marks :" + this.marks;
+      },
+    },
+    {
+      roll_no: 3,
+      name: "shinda",
+      age: 20,
+      marks: 80.9,
+      coursename: "mtech",
+      getdetails: function () {
+        return this.name + " and marks :" + this.marks;
+      },
+    },
+  ];
+  var html = "<table class='table table-bordered'><thead><tr><th>Roll_number</th><th>name</th><th>age</th><th>coursename</th><th>controls</th></thead><tbody>"
+  for(student of students){
+      html += `<tr>
+      <td>${student.roll_no}</td>
+      <td>${student.name}</td>
+      <td>${student.age}</td>
+      <td>${student.coursename}</td>
+      <td><input type='button' value='delete' class='btn btn-danger' onclick="remove('${student.roll_no}')">
+      </tr>
+      `
+    //   console.log(student);
+    //   console.log("------");
+  }
+ 
+  // alert(students.roll_no);
+  // alert(students.name);
+  // alert(students.age);
+  // alert(students.marks);
+  // alert(students.coursename);
 
+  // var html = "<table class='table table-bordered'>";
+  // html += `<tr><th>roll_no</th><td>${students.roll_no}</td></tr>`;
+  // html += `<tr><th>name</th><td>${students.name}</td></tr>`;
+  // html += `<tr><th>age</th><td>${students.age}</td></tr>`;
+  // html += `<tr><th>marks</th><td>${students.marks}</td></tr>`;
+  // html += `<tr><th>coursename</th><td>${students.coursename}</td></tr>`;
+  html += `</tbody></table>`;
+  document.getElementById("output").innerHTML = html;
 
-
-function go(){
-    var students = {'roll_no' : 1 , 'name' : 'karan', 'age' : 20 , 'marks' : 80.9 , 'coursename' : 'btech' }
-    // alert(students.roll_no);
-    // alert(students.name);
-    // alert(students.age);
-    // alert(students.marks);
-    // alert(students.coursename);
-
-    var html = "<table class='table table-bordered'>";
-    html += `<tr><th>roll_no</th><td>${students.roll_no}</td></tr>`;
-    html += `<tr><th>name</th><td>${students.name}</td></tr>`;
-    html += `<tr><th>age</th><td>${students.age}</td></tr>`;
-    html += `<tr><th>marks</th><td>${students.marks}</td></tr>`;
-    html += `<tr><th>coursename</th><td>${students.coursename}</td></tr>`;
-    html += `<table>`;
-    document.getElementById("output").innerHTML = html;
-
-
-
+  // console.log(students);
 }
