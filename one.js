@@ -329,15 +329,38 @@
 
 // making sub string from string
 
-function go(){
-//     var s  = "hello world how are you";
-    // var novi = s.substring(6,12);
-    // console.log(novi);
-    // var novi = s.replace("world", "amritsar");
-    // console.log(novi);
+// function go(){
+// //     var s  = "hello world how are you";
+//     // var novi = s.substring(6,12);
+//     // console.log(novi);
+//     // var novi = s.replace("world", "amritsar");
+//     // console.log(novi);
 
-    var s = "UNDERmaintainance.jpg";
-    var result = s.toLowerCase().endsWith("jpg");
-    console.log(result);
-    console.log(s.repeat(6));
+//     var s = "UNDERmaintainance.jpg";
+//     var result = s.toLowerCase().endsWith("jpg");
+//     console.log(result);
+//     console.log(s.repeat(6));
+// }
+
+
+
+function go(){
+    var students = {'roll_no' : 1 , 'name' : 'karan', 'age' : 20 , 'marks' : 80.9 , 'coursename' : 'btech' }
+    // alert(students.roll_no);
+    // alert(students.name);
+    // alert(students.age);
+    // alert(students.marks);
+    // alert(students.coursename);
+
+    var html = "<table class='table table-bordered'>";
+    html += `<tr><th>roll_no</th><td>${students.roll_no}</td></tr>`;
+    html += `<tr><th>name</th><td>${students.name}</td></tr>`;
+    html += `<tr><th>age</th><td>${students.age}</td></tr>`;
+    html += `<tr><th>marks</th><td>${students.marks}</td></tr>`;
+    html += `<tr><th>coursename</th><td>${students.coursename}</td></tr>`;
+    html += `<table>`;
+    document.getElementById("output").innerHTML = html;
+
+
+
 }
