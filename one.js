@@ -380,6 +380,12 @@ function go() {
       },
     },
   ];
+//   document.write(JSON.stringify(students))
+//   var temp = JSON.stringify(students);
+//   console.log(typeof temp);
+
+//   var temp1 = JSON.parse(temp);
+//   console.log(typeof temp1)
   var html = "<table class='table table-bordered'><thead><tr><th>Roll_number</th><th>name</th><th>age</th><th>coursename</th><th>controls</th></thead><tbody>"
   for(student of students){
       html += `<tr>
@@ -392,7 +398,7 @@ function go() {
       `
     //   console.log(student);
     //   console.log("------");
-  }
+  // }
  
   // alert(students.roll_no);
   // alert(students.name);
@@ -400,14 +406,23 @@ function go() {
   // alert(students.marks);
   // alert(students.coursename);
 
-  // var html = "<table class='table table-bordered'>";
-  // html += `<tr><th>roll_no</th><td>${students.roll_no}</td></tr>`;
-  // html += `<tr><th>name</th><td>${students.name}</td></tr>`;
-  // html += `<tr><th>age</th><td>${students.age}</td></tr>`;
-  // html += `<tr><th>marks</th><td>${students.marks}</td></tr>`;
-  // html += `<tr><th>coursename</th><td>${students.coursename}</td></tr>`;
+  var html = "<table class='table table-bordered'>";
+  html += `<tr><th>roll_no</th><td>${students.roll_no}</td></tr>`;
+  html += `<tr><th>name</th><td>${students.name}</td></tr>`;
+  html += `<tr><th>age</th><td>${students.age}</td></tr>`;
+  html += `<tr><th>marks</th><td>${students.marks}</td></tr>`;
+  html += `<tr><th>coursename</th><td>${students.coursename}</td></tr>`;
   html += `</tbody></table>`;
   document.getElementById("output").innerHTML = html;
 
   // console.log(students);
 }
+// function go2(){
+//   var dt = new Date(2020,11,18);
+//   console.log(dt);
+//   console.log(dt.getDate());
+//   console.log(dt.getDay());
+//   console.log(dt.getMonth()+1);
+//   console.log(dt.getFullYear());
+
+ }
